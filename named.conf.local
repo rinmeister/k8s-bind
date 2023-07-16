@@ -1,0 +1,17 @@
+// jinja2 template version 1.0 for BIND9
+
+zone "grijsbach.eu" {
+        type master;
+        file "/etc/bind/for.grijsbach.eu.org";
+ };
+zone "0.10.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/rev0.grijsbach.eu.org";
+
+ };
+ zone "1.10.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/rev1.grijsbach.eu.org";
+
+ };
+ 

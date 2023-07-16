@@ -1,0 +1,22 @@
+$TTL 3600
+@   IN  SOA         grijsbach.eu. root.grijsbach.eu. (
+        2019032301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        300         ;Minimum TTL
+        )
+; DNS Servers
+@       IN      NS      ns1.grijsbach.eu.
+
+
+; PTR records
+96    IN  PTR     gr1-esx01.grijsbach.eu
+4    IN  PTR     gr1-bsd04.grijsbach.eu
+3    IN  PTR     gr1-asa01.grijsbach.eu
+3    IN  PTR     gr1-asa01.grijsbach.eu
+10    IN  PTR     gr1-sw01.grijsbach.eu
+11    IN  PTR     gr1-sw02.grijsbach.eu
+20    IN  PTR     gr1-ap01.grijsbach.eu
+21    IN  PTR     gr1-ap02.grijsbach.eu
+22    IN  PTR     gr1-ap03.grijsbach.eu

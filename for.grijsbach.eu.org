@@ -1,0 +1,65 @@
+$TTL 3600
+@   IN  SOA     grijsbach.eu. root.grijsbach.eu. (
+        2019032301  ;Serial
+        3600        ;Refresh    
+        1800        ;Retry
+        604800      ;Expire
+        300         ;Minimum TTL
+)
+; DNS Servers
+@       IN      NS      ns1.grijsbach.eu.
+; MX Records
+    IN      MX 10   mx.grijsbach.eu.
+    IN      MX 20   relay.transip.nl
+
+; A records
+@   	IN	    A	    95.97.94.36
+localhost   	IN	    A	    127.0.0.1
+ns1   	IN	    A	    10.10.1.13
+mx   	IN	    A	    95.97.94.37
+mail   	IN	    A	    95.97.94.37
+vpn   	IN	    A	    95.97.94.34
+www   	IN	    A	    10.10.4.15
+gr1-esx01   	IN	    A	    10.10.0.96
+gr1-bsd05   	IN	    A	    95.97.94.36
+gr1-bsd06   	IN	    A	    95.97.94.37
+gr1-bsd01   	IN	    A	    10.10.1.11
+gr1-bsd04   	IN	    A	    10.10.0.4
+gr1-asa01   	IN	    A	    10.10.0.3
+gr1-asa01   	IN	    A	    10.10.0.3
+gr1-sw01   	IN	    A	    10.10.0.10
+gr1-sw02   	IN	    A	    10.10.0.11
+gr1-ap01   	IN	    A	    10.10.0.20
+gr1-ap02   	IN	    A	    10.10.0.21
+gr1-ap03   	IN	    A	    10.10.0.22
+gr1-bsd07   	IN	    A	    10.10.1.14
+unifi-ct	IN	    A       172.17.0.2
+app-server-01	IN	    A       10.10.1.12
+pi-zwave	5	IN          A       10.10.1.16
+
+; AAAA records
+@   	IN	    AAAA    2001:470:1f15:87::1
+;www   	IN	    AAAA    2001:470:1f15:87::1
+
+; Aliases
+webmail       IN      CNAME   grijsbach.eu.
+imaps       IN      CNAME   grijsbach.eu.
+postfixadmin       IN      CNAME   grijsbach.eu.
+maia       IN      CNAME   grijsbach.eu.
+web       IN      CNAME   gr1-bsd05
+monitor       IN      CNAME   gr1-ubuntu01
+file       IN      CNAME   gr1-bsd04
+dns       IN      CNAME   gr1-bsd01
+firewall       IN      CNAME   gr1-asa01
+switch1       IN      CNAME   gr1-sw01
+switch2       IN      CNAME   gr1-sw02
+ap1       IN      CNAME   gr1-ap01
+ap2       IN      CNAME   gr1-ap02
+ap3       IN      CNAME   gr1-ap03
+controller       IN      CNAME   unifi-ct
+appserver-01	IN	CNAME	app-server-01
+appserver	IN	CNAME	app-server-01
+i-controller   IN      CNAME   pi-zwave
+zwave           IN      CNAME   pi-zwave
+domoticz        IN      CNAME   pi-zwave
+
